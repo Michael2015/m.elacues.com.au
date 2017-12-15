@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高级搜索 - Powered by EmpireCMS</title>
+<link href="/skin/default/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/default/js/tabs.js"></script>
+<script src="/e/data/images/setday.js"></script>
+</head>
+<body class="listpage">
+<!-- 页头 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="top">
+<tr>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="63%">
+<!-- 登录 -->
+<script>
+document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+</script>
+</td>
+<td align="right">
+<a onclick="window.external.addFavorite(location.href,document.title)" href="#ecms">加入收藏</a> | <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('/')" href="#ecms">设为首页</a> | <a href="/e/member/cp/">会员中心</a> | <a href="/e/DoInfo/">我要投稿</a> | <a href="/e/web/?type=rss2" target="_blank">RSS<img src="/skin/default/images/rss.gif" border="0" hspace="2" /></a>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="10">
+<tr valign="middle">
+<td width="240" align="center"><a href="/"><img src="/skin/default/images/logo.gif" width="200" height="65" border="0" /></a></td>
+<td align="center"><a href="http://www.phome.net/OpenSource/" target="_blank"><img src="/skin/default/images/opensource.gif" width="100%" height="70" border="0" /></a></td>
+</tr>
+</table>
+<!-- 导航tab选项卡 -->
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" class="nav">
+  <tr> 
+    <td class="nav_global"><ul>
+        <li class="curr" id="tabnav_btn_0" onmouseover="tabit(this)"><a href="/">首页</a></li>
+        <li id="tabnav_btn_1" onmouseover="tabit(this)"><a href="/news/">新闻中心</a></li>
+        <li id="tabnav_btn_2" onmouseover="tabit(this)"><a href="/download/">下载中心</a></li>
+        <li id="tabnav_btn_3" onmouseover="tabit(this)"><a href="/movie/">影视频道</a></li>
+        <li id="tabnav_btn_4" onmouseover="tabit(this)"><a href="/shop/">网上商城</a></li>
+        <li id="tabnav_btn_5" onmouseover="tabit(this)"><a href="/flash/">FLASH频道</a></li>
+        <li id="tabnav_btn_6" onmouseover="tabit(this)"><a href="/photo/">图片频道</a></li>
+        <li id="tabnav_btn_7" onmouseover="tabit(this)"><a href="/article/">文章中心</a></li>
+        <li id="tabnav_btn_8" onmouseover="tabit(this)"><a href="/info/">分类信息</a></li>
+      </ul></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="10" cellpadding="0">
+	<tr valign="top">
+		<td class="list_content"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="position">
+				<tr>
+					<td>现在的位置：<a href='/index.html'>首页</a>&nbsp;>&nbsp;<a href='../search/'>高级搜索</a>&nbsp;></td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box">
+				<tr>
+					<td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><form action='/e/search/index.php' method="post" name="search_news" id="search_news">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="54%"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td bgcolor="#F4F4F4"><strong>搜索范围</strong></td>
+													</tr>
+											</table></td>
+											<td width="46%"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td bgcolor="#F4F4F4"><strong>搜索栏目</strong></td>
+													</tr>
+											</table></td>
+										</tr>
+										<tr>
+											<td valign="top"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td><input type="radio" name="show" value="title" checked="checked" />
+															标题
+															<input type="radio" name="show" value="smalltext" />
+															简介
+															<input type="radio" name="show" value="newstext" />
+															内容
+															<input type="radio" name="show" value="writer" />
+															作者
+															<input name="show" type="radio" value="title,smalltext,newstext,writer" />
+															不限</td>
+													</tr>
+												</table>
+													<br />
+													<table width="100%" border="0" cellpadding="6" cellspacing="0">
+														<tr bgcolor="#F4F4F4">
+															<td><strong>时间限制</strong><font color="#666666">(0000-00-00为不限制)</font></td>
+														</tr>
+														<tr>
+															<td height="30" valign="top">从
+																<input name="starttime" type="text" value="0000-00-00" size="12" onclick="setday(this)" />
+																到
+																<input name="endtime" type="text" value="0000-00-00" size="12" onclick="setday(this)" />
+																之间的数据</td>
+														</tr>
+														<tr>
+															<td bgcolor="#F4F4F4"><strong>价格限制</strong><font color="#666666">(商城模型中有效,0为不限制)</font></td>
+														</tr>
+														<tr>
+															<td>从
+																<input name="startprice" type="text" id="startprice" value="0" size="6" />
+																到
+																<input name="endprice" type="text" id="endprice" value="0" size="6" />
+																元之间</td>
+														</tr>
+												</table></td>
+											<td valign="top"><table width="100%" border="0" cellspacing="6" cellpadding="0">
+													<tr>
+														<td><select name="classid" size="8" id="select2" style="width: 100%;height:112px">
+																<option value="0" selected="selected">所有栏目</option>
+															<option value='2'>|-关于我们</option><option value='34' style='background:#99C4E3'>&nbsp;&nbsp;|-国内新闻</option><option value='35' style='background:#99C4E3'>&nbsp;&nbsp;|-国际新闻</option><option value='36' style='background:#99C4E3'>&nbsp;&nbsp;|-娱乐新闻</option><option value='37' style='background:#99C4E3'>&nbsp;&nbsp;|-体育新闻</option><option value='3'>|-品牌中心</option><option value='38' style='background:#99C4E3'>&nbsp;&nbsp;|-系统软件</option><option value='39' style='background:#99C4E3'>&nbsp;&nbsp;|-网络工具</option><option value='40' style='background:#99C4E3'>&nbsp;&nbsp;|-安全相关</option><option value='41' style='background:#99C4E3'>&nbsp;&nbsp;|-媒体工具</option><option value='4'>|-新闻资讯</option><option value='42' style='background:#99C4E3'>&nbsp;&nbsp;|-动作片</option><option value='43' style='background:#99C4E3'>&nbsp;&nbsp;|-爱情片</option><option value='44' style='background:#99C4E3'>&nbsp;&nbsp;|-喜剧片</option><option value='45' style='background:#99C4E3'>&nbsp;&nbsp;|-连续剧</option><option value='5'>|-招商政策</option><option value='46' style='background:#99C4E3'>&nbsp;&nbsp;|-手机数码</option><option value='47' style='background:#99C4E3'>&nbsp;&nbsp;|-家用电器</option><option value='48' style='background:#99C4E3'>&nbsp;&nbsp;|-品牌电脑</option><option value='49' style='background:#99C4E3'>&nbsp;&nbsp;|-图书杂志</option><option value='7'>|-用户中心</option><option value='52' style='background:#99C4E3'>&nbsp;&nbsp;|-明星风采</option><option value='53' style='background:#99C4E3'>&nbsp;&nbsp;|-自然风景</option><option value='54' style='background:#99C4E3'>&nbsp;&nbsp;|-动漫图片</option><option value='8'>|-加入澳容</option><option value='55' style='background:#99C4E3'>&nbsp;&nbsp;|-小说</option><option value='56' style='background:#99C4E3'>&nbsp;&nbsp;|-散文</option><option value='57' style='background:#99C4E3'>&nbsp;&nbsp;|-诗歌</option>
+          
+														</select></td>
+													</tr>
+												</table>
+													<table width="100%" border="0" cellpadding="6" cellspacing="0">
+														<tr>
+															<td bgcolor="#F4F4F4"><strong>结果显示</strong></td>
+														</tr>
+														<tr>
+															<td height="30"><select name="orderby" id="select4">
+																	<option value="">按发布日期</option>
+																	<option value="id">信息ID</option>
+																	<option value="plnum">评论数</option>
+																	<option value="onclick">人气</option>
+																	<option value="totaldown">下载数</option>
+																</select>
+																	<select name="myorder" id="select5">
+																		<option value="0">倒序排列</option>
+																		<option value="1">顺序排列</option>
+																	</select>
+															</td>
+														</tr>
+												</table></td>
+										</tr>
+									</table>
+								<table width="100%" border="0" cellpadding="4" cellspacing="0">
+										<tr>
+											<td>关键字：
+												<input name="keyboard" type="text" id="keyboard2" size="60" />
+													<input type="submit" name="Submit22" value="搜索" />
+											</td>
+										</tr>
+									</table>
+							</form></td>
+						</tr>
+					</table></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+</div>
+<!-- 尾部 开始 -->
+        <div class="m-footer">
+            <div class="m-container">
+                <img src="http://www.eaorong.com/theme/eaoron/images/logo/foot_logo.png" class="foot-imgone g-left" />
+                <img src="http://www.eaorong.com/theme/eaoron/images/logo/top_logo.png" class="foot-imgtwo g-left" />
+                <div class="foot-info g-right">
+                    <h3>关注EAORON</h3>
+                    <div class="foot-bk">
+                        <a href="http://weibo.com/eaoron" class="foot-xl">新浪微博</a>
+                        <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="http://www.eaorong.com/theme/eaoron/images/test/erweima.jpg" /><i></i></span></a>
+                    </div>
+                    <p>Australian United Pharmaceuticals Pty Ltd</p>
+                    <strong>4008-010-640</strong>
+                </div>
+            </div>
+        </div>
+<div style="display:none"><script src="https://s22.cnzz.com/z_stat.php?id=1262215559&web_id=1262215559" language="JavaScript"></script></div>
+        <!-- 尾部 结束 -->
+    </div>
+    <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>
+    <script src="http://www.eaorong.com/theme/eaoron/images/jquery.cycle2.js"></script>
+    <script src="http://www.eaorong.com/theme/eaoron/images/main.js"></script>
+</body>
+</html>
+</body>
+</html>

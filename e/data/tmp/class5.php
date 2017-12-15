@@ -1,0 +1,134 @@
+<?php
+if(!defined('InEmpireCMS'))
+{
+	exit();
+}
+?>     <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>招商政策</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://www.eaorong.com/theme/eaoron/images/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="m-warp">
+        <div class="m-body">
+            <!-- 头部 开始 -->
+            <div class="m-top">
+                <div class="m-container">
+                    <div class="g-left">
+                        <a href="http://www.eaoron.com.au/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>400-8010-640</strong>
+                    </div>
+                    <div class="g-right">
+                        <a href="/user.html#Agency">官方授权</a>/<a href="#">在线客服</a>
+                    </div>
+                </div>
+            </div>            <!-- 头部 结束-->
+            <!-- 导航 开始 -->
+            <div class="m-head">
+                <div class="m-container">
+                    <a href="index.html" class="head-logo"><img src="http://www.eaorong.com/theme/eaoron/images/logo/top_logo.png" /></a>
+                   <ul class="m-nav">
+<li><a href="/" class="g-noborder nava on"><span>Home page</span><em>首页</em></a></li>
+       <?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+<li><a href="/<?=$bqr[classpath]?>" class="g-noborder nava"><span><?=$bqr[bname]?></span><em><?=$bqr[classname]?></em></a></li>
+
+<?php
+}
+}
+?>
+ </ul>
+                </div>
+            </div>
+            <!-- 导航 结束-->
+            <!-- banner 开始 -->
+            <div class="m-imgbox">
+                <img src="http://www.eaorong.com/theme/eaoron/images/info/pbanner02.jpg" />
+            </div>
+            <!-- banner 结束-->
+
+            <!--  内容开始 -->
+            <div class="m-page">
+                <div class="m-container">
+                    <div class="t-title">
+                        <h2>平台优势</h2>
+                        <p>Platform advantage</p>
+                        <i></i>
+                    </div>
+                    <div class="g-fcenter">
+                        <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment01.jpg" />
+                    </div>
+                </div>
+                <div class="m-invest">
+                    <div class="m-container">
+                        <div class="t-title">
+                            <h2>稽查制度</h2>
+                            <p>Auditing system</p>
+                            <i></i>
+                        </div>
+                        <div class="invest-box">
+                            <h3>
+                                <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment02.jpg" />
+                            </h3>
+                            <p>
+                                1、个人有意推广经营EAORON产品者，需认真阅读并遵守本规则，方可在官网进行注册。完成注册并获得个人授权证书后，成为EAORON产品的微商代理（代理商），必须同意并遵守本规则及国家相关法律法规。如有违反，本公司有权按相关规定及法律法规进行处罚或吊销个人授权证书。
+                            </p>
+                            <p>
+                                2、个人授权证书是本公司授予微商个人正当经营EAORON产品的有效凭证，并遵守《澳大利亚联合制药跨境微商规则》所有内容的责任承诺书。未获得授权证书者，我司将拒绝对其销售行为及产品负责，所产生的一切后果均由销售者自行承担。
+                            </p>
+                            <i></i>
+                         </div>
+                    </div>
+                </div>
+                <div class="m-container">
+                    <div class="t-title">
+                        <h2>举报投诉</h2>
+                        <p>Report Complaints</p>
+                        <i></i>
+                    </div>
+                    <div class="g-ohide m-invest1">
+                        <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment04.jpg" class="g-left" />
+                        <div class="g-right invest-box">
+                            <h3>
+                                <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment05.jpg" />
+                            </h3>
+                            <p>本公司设立专门稽查部门查处各代理商违法违规行为，以促进市场的良性发展和维护产品形象。稽查部欢迎并接受所有代理商对其他代理商违规行为的投诉和检举，举报内容经查实后将给予举报者适当奖励。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  内容结束-->
+     </div>
+<!-- 尾部 开始 -->
+        <div class="m-footer">
+            <div class="m-container">
+                <img src="http://www.eaorong.com/theme/eaoron/images/logo/foot_logo.png" class="foot-imgone g-left" />
+                <img src="http://www.eaorong.com/theme/eaoron/images/logo/top_logo.png" class="foot-imgtwo g-left" />
+                <div class="foot-info g-right">
+                    <h3>关注EAORON</h3>
+                    <div class="foot-bk">
+                        <a href="http://weibo.com/eaoron" class="foot-xl">新浪微博</a>
+                        <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="http://www.eaorong.com/theme/eaoron/images/test/erweima.jpg" /><i></i></span></a>
+                    </div>
+                    <p>Australian United Pharmaceuticals Pty Ltd</p>
+                    <strong>4008-010-640</strong>
+                </div>
+            </div>
+        </div>
+<div style="display:none"><script src="https://s22.cnzz.com/z_stat.php?id=1262215559&web_id=1262215559" language="JavaScript"></script></div>
+        <!-- 尾部 结束 -->
+    </div>
+    <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>
+    <script src="http://www.eaorong.com/theme/eaoron/images/jquery.cycle2.js"></script>
+    <script src="http://www.eaorong.com/theme/eaoron/images/main.js"></script>
+</body>
+</html>
