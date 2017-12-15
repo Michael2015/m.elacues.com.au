@@ -50,32 +50,24 @@ $bqno++;
                 </div>
             </div>
             <!-- 导航 结束-->
-            <!-- banner 开始 -->
-            <div class="m-imgbox">
-                <img src="http://www.eaorong.com/theme/eaoron/images/info/pbanner04.jpg" />
-            </div>
-            <!-- banner 结束-->
-
-            <!--  内容开始 -->
-            <div class="m-page">
-                <div class="m-container">
-                    <div class="t-title">
-                        <h2>人才理念</h2>
-                        <p>Talent concept</p>
-                        <i></i>
-                    </div>
-                    <div class="m-join">
-                        <h3>
-                            <img src="http://www.eaorong.com/theme/eaoron/images/join/join01.jpg" />
-                        </h3>
-                        <p>
-                            人才是赛出来的，不是看出来的，我们尊重每个人的知识和能力，注重对员工的素质培养。我们提供公平竞争的机会和环境。力求员工以竞争合作方式实现自我价值。我们的基本人才观是：德才并举，以德为先，敬业为本，团队第一。我们不以伯乐慧眼识人，只任骏马竞赛驰骋。
-                        </p>
-                        <i></i>
-                    </div>
-                </div>
-            </div>
-            <!--  内容结束-->
+            <!-- 内容开始 start -->
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq('58',1,13,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+<?php
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='79' order by id desc");
+?>
+<?=$fr[newstext]?>
+<?php
+}
+}
+?> 
+            <!-- 内容结束 end-->
       </div>
 <!-- 尾部 开始 -->
         <div class="m-footer">

@@ -57,55 +57,22 @@ $bqno++;
             <!-- banner 结束-->
 
             <!--  内容开始 -->
-            <div class="m-page">
-                <div class="m-container">
-                    <div class="t-title">
-                        <h2>平台优势</h2>
-                        <p>Platform advantage</p>
-                        <i></i>
-                    </div>
-                    <div class="g-fcenter">
-                        <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment01.jpg" />
-                    </div>
-                </div>
-                <div class="m-invest">
-                    <div class="m-container">
-                        <div class="t-title">
-                            <h2>稽查制度</h2>
-                            <p>Auditing system</p>
-                            <i></i>
-                        </div>
-                        <div class="invest-box">
-                            <h3>
-                                <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment02.jpg" />
-                            </h3>
-                            <p>
-                                1、个人有意推广经营EAORON产品者，需认真阅读并遵守本规则，方可在官网进行注册。完成注册并获得个人授权证书后，成为EAORON产品的微商代理（代理商），必须同意并遵守本规则及国家相关法律法规。如有违反，本公司有权按相关规定及法律法规进行处罚或吊销个人授权证书。
-                            </p>
-                            <p>
-                                2、个人授权证书是本公司授予微商个人正当经营EAORON产品的有效凭证，并遵守《澳大利亚联合制药跨境微商规则》所有内容的责任承诺书。未获得授权证书者，我司将拒绝对其销售行为及产品负责，所产生的一切后果均由销售者自行承担。
-                            </p>
-                            <i></i>
-                         </div>
-                    </div>
-                </div>
-                <div class="m-container">
-                    <div class="t-title">
-                        <h2>举报投诉</h2>
-                        <p>Report Complaints</p>
-                        <i></i>
-                    </div>
-                    <div class="g-ohide m-invest1">
-                        <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment04.jpg" class="g-left" />
-                        <div class="g-right invest-box">
-                            <h3>
-                                <img src="http://www.eaorong.com/theme/eaoron/images/investment/investment05.jpg" />
-                            </h3>
-                            <p>本公司设立专门稽查部门查处各代理商违法违规行为，以促进市场的良性发展和维护产品形象。稽查部欢迎并接受所有代理商对其他代理商违规行为的投诉和检举，举报内容经查实后将给予举报者适当奖励。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq('46',1,13,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+<?php
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='80' order by id desc");
+?>
+<?=$fr[newstext]?>
+<?php
+}
+}
+?> 
             <!--  内容结束-->
      </div>
 <!-- 尾部 开始 -->
