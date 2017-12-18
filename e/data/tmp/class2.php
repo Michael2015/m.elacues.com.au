@@ -60,9 +60,17 @@ $bqno++;
             <!--  内容开始 -->
             <div class="m-page">
                 <div class="m-container">
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(60,1,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
                     <div class="t-title">
-                        <h2>企业介绍</h2>
-                        <p>Company Profile</p>
+                       <h2><?=$class_r[$bqr[classid]][classname]?></h2>
+                        <p><?=$bqsr[classname]?></p>
                         <i></i>
                     </div>
                 </div>
@@ -70,30 +78,44 @@ $bqno++;
                     <div class="m-container">
                         <div class="about-box">
                             <img src="http://www.eaorong.com/theme/eaoron/images/about/about02.jpg" />
-                            <p>
-                                湖南澳容健康管理有限公司是澳大利亚联合制药有限公司和澳大利亚健康管理产业公司驻大中华区运营中心。团队主要运营的
-                                EAORON等澳大利亚进口一线高端护肤品牌，是澳大利亚功能护肤品的新兴代表，是澳大利亚首家进军中国的微商品牌。旨在
-                                为大家提供更便捷的移动购物平台，同时结合了当前市场最流行的营销模式，融入社群分享经济，为广大客户提供更完善的微
-                                商创业服务！
-                            </p>
-                            <p>我们致力于打造中国女性健康护肤第一平台，让中国女性拥有更健康，更高品质的护肤享受，给女性朋友们由内到外的自信。</p>
+<?php
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='84' order by id desc");
+?>
+<?=$fr[newstext]?>
+
                         </div>
                     </div>
+<?php
+}
+}
+?>
                 </div>
                 <div class="m-container">
                     <div class="t-title">
-                        <h2>企业文化</h2>
-                        <p>Company Culture</p>
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(64,1,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+                        <h2><?=$class_r[$bqr[classid]][classname]?></h2>
+                        <p><?=$bqsr[classname]?></p>
+<?php
+}
+}
+?>
                         <i></i>
                     </div>
                 </div>
                 <div class="m-about2">
                     <ul>
-                        <li style="background:url(http://www.eaorong.com/theme/eaoron/images/about/about03.jpg) no-repeat center;background-size:cover;">
+<li style="background:url(http://www.eaorong.com/theme/eaoron/images/about/about04.jpg) no-repeat center;background-size:cover;">
                             <a href="javascript:void(0)">
                                 <div class="about-box">
                                     <div class="about-box2">
-                                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about07.png" />
+                                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about08.png" />
                                     </div>
                                 </div>
                             </a>
@@ -127,65 +149,102 @@ $bqno++;
                         </li>
                     </ul>
                 </div>
+
                 <div class="m-container">
                     <div class="t-title">
-                        <h2>品牌故事</h2>
-                        <p>Brand Story</p>
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(61,1,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+                           <h2><?=$class_r[$bqr[classid]][classname]?></h2>
+                        <p><?=$bqsr[classname]?></p>
+<?php
+}
+}
+?>
                         <i></i>
                     </div>
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(61,10,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+<?php
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='$bqr[id]'  order by id asc");
+?>
+
                     <div class="m-about3 g-ohide">
-                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about11.jpg" class="g-left about-img" style="margin-top:10px;" />
-                        <div class="about-box g-left">
-                            <p>
-                                源自澳洲的EAORON，成立于2015年初，座立在澳大利亚最大城市悉尼，起研发中心专注研发创新纯天然安全高效的功效性时尚护肤美容品，致力于将科技与美丽完美整合，品牌使命为美而生。它作为澳大利亚迅速崛起的一线护肤品牌，获得两任总理的支持签名点赞！受到无数美容达人的喜爱！在澳洲本土的药房和护肤品店有极高的市场占有率。
-                            </p>
-                            <em>
-                                From Australia EAORON, was founded in early 2015, stand in Australia's largest city of Sydney, the R & D center focused on the development of innovative natural safe and efficient efficacy are committed to skin care cosmetics, beauty and perfect integration of science and technology, brand mission for beauty and health. It as the rapid rise of the first line of skin care brand in Australia, the support of the two prime minister to get a signature like! By countless beauty favorite! Has a high market share in local pharmacies and skin care stores in australia.
-                            </em>
-                        </div>
+                        <img src="<?=$bqr[titlepic]?>" class="g-left about-img" style="margin-top:10px;" />
+<div class="about-box g-left">
+                       <?=$fr[newstext]?>
+</div>
                     </div>
-                    <div class="m-about3 g-ohide">
-                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about12.jpg" class="g-left about-img" style="margin-top:55px;" />
-                        <div class="about-box g-left">
-                            <p>
-                                LACUES品牌于2010年由悉尼时装周模特JASMINE创立。<br />
-                                作为知名模特与拥有律师证的智慧型美女，JASMINE非常关注皮肤保养，尤其处于这个对皮肤要求高的模特行业，好皮肤尤为重要。为此，JASMINE推出了专门针对模特研发的专用护肤品，坚持天然、纯净、健康的理念，融合澳洲尖端生物科技与植物萃取工艺，以自然活机的力量唤醒肌肤的生命力。并很快在模特圈流行起来。2016年，LACUES品牌被澳洲知名企业收购，品牌得到进一步提升，推出更多科技与天然产品。
-                            </p>
-                            <em>
-                                LACUES brand was founded in 2010 by the Sydney fashion week model JASMINE.<br />
-                                As a well-known model with a lawyer's license for the wisdom of beauty, JASMINE is very concerned about skin care, especially in the skin of the high requirements of the model industry, good skin is particularly important. To this end, JASMINE launched specifically for the model research for skin care products, adhere to the natural, pure, healthy, cutting-edge biotechnology and plant Australia fusion extraction process, wake up skin vitality to the natural living machine power. And soon became popular in the model circle. 2016, LACUES brand was acquired by well-known companies in Australia, the brand has been further promoted, the introduction of more technology and natural products.
-                            </em>
-                        </div>
-                    </div>
+<?php
+}
+}
+?>
                 </div>
+
+
                 <div class="m-about4">
                     <div class="m-container">
+ <?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(62,1,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
                         <div class="t-title">
-                            <h2>品牌大事记</h2>
-                            <p>Brand Memorabilia</p>
+                           <h2><?=$class_r[$bqr[classid]][classname]?></h2>
+                        <p><?=$bqsr[classname]?></p>
+
                             <i></i>
                         </div>
-                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about14.png" />
+                        <img src="<?=$bqr[titlepic]?>" />
+<?php
+}
+}
+?>
                     </div>
                 </div>
                 <div class="m-container">
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(63,1,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
                     <div class="t-title">
-                        <h2 id="contact">联系我们</h2>
-                        <p>Contact Us</p>
+                           <h2><?=$class_r[$bqr[classid]][classname]?></h2>
+                        <p><?=$bqsr[classname]?></p>
                         <i></i>
                     </div>
                     <div class="g-ohide m-about5">
                         <div class="g-left about-left">
-                            <img src="http://www.eaorong.com/theme/eaoron/images/about/about15.jpg" />
+                            <img src="<?=$bqr[titlepic]?>" />
                         </div>
                         <div class="g-right about-right">
-                            <p>澳大利亚联合制药有限公司（Australian United Pharmaceuticals Pty Ltd）</p>
-                            <p>大中华区运营中心—湖南澳容健康管理有限公司</p>
-                            <p>湖南长沙芙蓉芙蓉区政府芙蓉区政府旁旺德府国际大厦2001 </p>
-                            <p>电话：400-8010-640</p>
-                            <p>邮编: 410001</p>
+<?php
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='$bqr[id]'  order by id asc");
+?>
+                            <?=$fr[newstext]?>
                         </div>
                     </div>
+<?php
+}
+}
+?>
                 </div>
             </div>
             <!--  内容结束-->

@@ -1,0 +1,1 @@
+document.write("<li><a href=\"/join/concept/2017-12-15/79.html\" title=\"人才理念\">人才理念</a></li>");

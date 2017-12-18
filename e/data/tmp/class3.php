@@ -50,19 +50,25 @@ $bqno++;
                 </div>
             </div>
             <!-- 导航 结束-->
-            <!-- banner 开始 -->
-            <div class="m-imgbox">
-                <img src="http://www.eaorong.com/theme/eaoron/images/brand/heimm_02.jpg" />
-            </div>
-            <!-- banner 结束-->
-
             <!--  内容开始 -->
             <div class="m-page">
                 <div class="m-container m-brandimg">
-                    <img src="http://www.eaorong.com/theme/eaoron/images/brand/heimm_04.jpg" />
-                    <img src="http://www.eaorong.com/theme/eaoron/images/brand/heimm_06.jpg" />
-                    <img src="http://www.eaorong.com/theme/eaoron/images/brand/heimm_07.jpg" />
-                    <img src="http://www.eaorong.com/theme/eaoron/images/brand/heimm_08.jpg" />
+                    <?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(68,1,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+<?php
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]}  order by id desc");
+?>
+<?=$fr[newstext]?>
+<?php
+}
+}
+?>
                 </div>
                 <div style="display:none">品 牌：EAORON
 主要成份：水解燕麦蛋白，水解珍珠，羊奶提取物，乳木果油，茶叶提取物

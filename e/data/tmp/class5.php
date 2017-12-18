@@ -55,24 +55,23 @@ $bqno++;
                 <img src="http://www.eaorong.com/theme/eaoron/images/info/pbanner02.jpg" />
             </div>
             <!-- banner 结束-->
-
             <!--  内容开始 -->
-           <?php
+<?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq('46',1,13,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(59,1,0,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='80' order by id desc");
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='82' order by id desc");
 ?>
 <?=$fr[newstext]?>
 <?php
 }
 }
-?> 
+?>
             <!--  内容结束-->
      </div>
 <!-- 尾部 开始 -->
