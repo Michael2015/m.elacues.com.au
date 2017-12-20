@@ -66,7 +66,22 @@ $bqno++;
                         </div>
                         <div class="about-top">关于<strong>"EAORON"</strong></div>
                         <h3>EAORON</h3>
-                        <p class="about-p">EAORON是澳大利亚进口一线高端护肤品牌，是澳大利亚功能护肤品的新兴代表，是澳大利亚首家进军中国的微商品牌。旨在为大家提供更便捷的移动购物平台，同时结合了当前市场最流行的营销模式，融入社群分享经济，为广大客户提供更完善的微商创业服务！</p>
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(60,1,0,0);
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>
+<?php
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='84' order by id desc");
+?>
+<?=$fr[newstext]?>
+<?php
+}
+}
+?>
                         <a href="about.html">了解更多>></a>
                     </div>
                     <div class="g-left about-right">
@@ -78,25 +93,29 @@ $bqno++;
             <!--  新闻开始 -->
             <div class="m-inxnews">
                 <div class="m-container g-ohide">
-                    <div class="g-left g-ohide" style="margin:0 20px;">
-                        <a href="http://www.eaorong.com/news/Company/107.html" class="news-img g-left">
-                            <img src="http://www.eaorong.com/images/article/107_1513150814507009.png" />
+<?php
+$bqno=0;
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(65,2,0,0,'firsttitle=1 or firsttitle=0','newstime DESC');
+if($ecms_bq_sql){
+while($bqr=$empire->fetch($ecms_bq_sql)){
+$bqsr=sys_ReturnEcmsLoopStext($bqr);
+$bqno++;
+?>   
+                 <div class="g-left g-ohide" style="margin:0 20px;">
+                        <a href="<?=$bqr['titleurl']?>" class="news-img g-left">
+                            <img src="<?=$bqr['titlepic']?>" />
                         </a>
-                        <a href="http://www.eaorong.com/news/Company/107.html" class="news-info g-left">
-                            <h3 class="g-toverflow">EAORON跨境微商引领新微商时代4.0刺激传...</h3>
-                            <span>发布时间：12-13</span>
-                            <p class="g-toverflow2">导语：小米创始人雷军曾经说过这样一句话，“无论是在什么时代，只要站在风口，猪都可以飞起来”。这句话用来形容当下的微商行业也颇为合适，在风口之上，所有的微商从业人员都赚了个盆满钵满。但是不...</p>
+                        <a href="<?=$bqr['titleurl']?>" class="news-info g-left">
+                            <h3 class="g-toverflow"><?=$bqr['title']?></h3>
+                            <span>发布时间：<?=$bqr['newspath']?></span>
+                            <p class="g-toverflow2"><?=$bqr['smalltext']?></p>
                         </a>
-                    </div>                    <div class="g-left g-ohide" style="margin:0 20px;">
-                        <a href="http://www.eaorong.com/news/Company/106.html" class="news-img g-left">
-                            <img src="http://www.eaorong.com/images/article/106_1512697415960691.png" />
-                        </a>
-                        <a href="http://www.eaorong.com/news/Company/106.html" class="news-info g-left">
-                            <h3 class="g-toverflow">EAORON微商达人“朱彤”，想做赢家先成为行家</h3>
-                            <span>发布时间：12-08</span>
-                            <p class="g-toverflow2">优秀的人无论在哪都很优秀，这句话放在朱彤身上十分的适用。朱彤EAORON跨境微商联合创始人新西兰第一大团队创始人澳洲Monash大学免疫学博士朱彤与Monash大学免疫科学学院院长与EA...</p>
-                        </a>
-                    </div>                </div>
+                    </div>   
+             <?php
+}
+}
+?>
+               </div>
             </div>
             <!--  新闻结束-->
         </div>

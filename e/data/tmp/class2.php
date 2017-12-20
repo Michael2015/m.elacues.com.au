@@ -216,7 +216,7 @@ $bqno++;
 ?>
                     </div>
                 </div>
-                <div class="m-container">
+                <div class="m-container" id="contact">
 <?php
 $bqno=0;
 $ecms_bq_sql=sys_ReturnEcmsLoopBq(63,1,0,0);
