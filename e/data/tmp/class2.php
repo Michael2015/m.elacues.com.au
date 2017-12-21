@@ -19,17 +19,17 @@ if(!defined('InEmpireCMS'))
             <div class="m-top">
                 <div class="m-container">
                     <div class="g-left">
-                        <a href="http://www.eaoron.com.au/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>400-8010-640</strong>
+                        <a href="/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>188-2414-9679</strong>
                     </div>
                     <div class="g-right">
-                        <a href="/user.html#Agency">官方授权</a>/<a href="#">在线客服</a>
+                        <a href="/">官方授权</a>/<a href="#">在线客服</a>
                     </div>
                 </div>
             </div>            <!-- 头部 结束-->
             <!-- 导航 开始 -->
             <div class="m-head">
                 <div class="m-container">
-                    <a href="index.html" class="head-logo"><img src="http://www.eaorong.com/theme/eaoron/images/logo/top_logo.png" /></a>
+                    <a href="index.html" class="head-logo"><img src="/skin/default/images/lacues/logo.png" /></a>
                    <ul class="m-nav">
 <li><a href="/" class="g-noborder nava on"><span>Home page</span><em>首页</em></a></li>
        <?php
@@ -76,7 +76,7 @@ $bqno++;
                 </div>
                 <div class="m-about1">
                     <div class="m-container">
-                        <div class="about-box">
+                        <div class="about-box" style="overflow:hidden;!important">
                             <img src="http://www.eaorong.com/theme/eaoron/images/about/about02.jpg" />
 <?php
 $fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='84' order by id desc");
@@ -111,38 +111,38 @@ $bqno++;
                 </div>
                 <div class="m-about2">
                     <ul>
-<li style="background:url(http://www.eaorong.com/theme/eaoron/images/about/about04.jpg) no-repeat center;background-size:cover;">
+<li style="background:url(/skin/default/images/lacues/company_culture_1.jpg) no-repeat center;background-size:cover;">
                             <a href="javascript:void(0)">
                                 <div class="about-box">
                                     <div class="about-box2">
-                                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about08.png" />
+                                       <p>我们的宗旨：品质第一、服务第一、团队第一</p>
                                     </div>
                                 </div>
                             </a>
                         </li>
-                        <li style="background:url(http://www.eaorong.com/theme/eaoron/images/about/about04.jpg) no-repeat center;background-size:cover;">
+                        <li style="background:url(/skin/default/images/lacues/company_culture_2.jpg) no-repeat center;background-size:cover;">
                             <a href="javascript:void(0)">
                                 <div class="about-box">
                                     <div class="about-box2">
-                                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about08.png" />
+                                        <p>我们的理念：以人为本、诚信共赢</p>
                                     </div>
                                 </div>
                             </a>
                         </li>
-                        <li style="background:url(http://www.eaorong.com/theme/eaoron/images/about/about05.jpg) no-repeat center;background-size:cover;">
+                        <li style="background:url(/skin/default/images/lacues/company_culture_3.jpg) no-repeat center;background-size:cover;">
                             <a href="javascript:void(0)">
                                 <div class="about-box">
                                     <div class="about-box2">
-                                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about09.png" />
+                                        <p>我们的精神：勇于探索、敢于拼搏</p>
                                     </div>
                                 </div>
                             </a>
                         </li>
-                        <li style="background:url(http://www.eaorong.com/theme/eaoron/images/about/about06.jpg) no-repeat center;background-size:cover;">
+                        <li style="background:url(/skin/default/images/lacues/company_culture_4.jpg) no-repeat center;background-size:cover;">
                             <a href="javascript:void(0)">
                                 <div class="about-box">
                                     <div class="about-box2">
-                                        <img src="http://www.eaorong.com/theme/eaoron/images/about/about10.png" />
+                                        <p>我们的责任：每一分盈利，每一分关爱</p>
                                     </div>
                                 </div>
                             </a>
@@ -252,20 +252,19 @@ $fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} w
 <!-- 尾部 开始 -->
         <div class="m-footer">
             <div class="m-container">
-                <img src="http://www.eaorong.com/theme/eaoron/images/logo/foot_logo.png" class="foot-imgone g-left" />
-                <img src="http://www.eaorong.com/theme/eaoron/images/logo/top_logo.png" class="foot-imgtwo g-left" />
+                <img src="/skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" />
+                <img src="/skin/default/images/lacues/logo.png" class="foot-imgtwo g-left" />
                 <div class="foot-info g-right">
-                    <h3>关注EAORON</h3>
+                    <h3>关注LACUES</h3>
                     <div class="foot-bk">
-                        <a href="http://weibo.com/eaoron" class="foot-xl">新浪微博</a>
-                        <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="http://www.eaorong.com/theme/eaoron/images/test/erweima.jpg" /><i></i></span></a>
+                        <a href="https://m.weibo.cn/u/6390383565" class="foot-xl">新浪微博</a>
+                        <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="/skin/default/images/lacues/weixin.png" /><i></i></span></a>
                     </div>
-                    <p>Australian United Pharmaceuticals Pty Ltd</p>
-                    <strong>4008-010-640</strong>
+                    <p>Han-Yao International Holding Group</p>
+                    <strong>188-2414-9679</strong>
                 </div>
             </div>
         </div>
-<div style="display:none"><script src="https://s22.cnzz.com/z_stat.php?id=1262215559&web_id=1262215559" language="JavaScript"></script></div>
         <!-- 尾部 结束 -->
     </div>
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>

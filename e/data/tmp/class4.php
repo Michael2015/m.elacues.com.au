@@ -19,17 +19,17 @@ if(!defined('InEmpireCMS'))
             <div class="m-top">
                 <div class="m-container">
                     <div class="g-left">
-                        <a href="http://www.eaoron.com.au/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>400-8010-640</strong>
+                        <a href="/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>188-2414-9679</strong>
                     </div>
                     <div class="g-right">
-                        <a href="/user.html#Agency">官方授权</a>/<a href="#">在线客服</a>
+                        <a href="/">官方授权</a>/<a href="#">在线客服</a>
                     </div>
                 </div>
             </div>            <!-- 头部 结束-->
             <!-- 导航 开始 -->
             <div class="m-head">
                 <div class="m-container">
-                    <a href="index.html" class="head-logo"><img src="http://www.eaorong.com/theme/eaoron/images/logo/top_logo.png" /></a>
+                    <a href="index.html" class="head-logo"><img src="/skin/default/images/lacues/logo.png" /></a>
                    <ul class="m-nav">
 <li><a href="/" class="g-noborder nava on"><span>Home page</span><em>首页</em></a></li>
        <?php
@@ -140,20 +140,19 @@ $bqno++;
 <!-- 尾部 开始 -->
         <div class="m-footer">
             <div class="m-container">
-                <img src="http://www.eaorong.com/theme/eaoron/images/logo/foot_logo.png" class="foot-imgone g-left" />
-                <img src="http://www.eaorong.com/theme/eaoron/images/logo/top_logo.png" class="foot-imgtwo g-left" />
+                <img src="/skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" />
+                <img src="/skin/default/images/lacues/logo.png" class="foot-imgtwo g-left" />
                 <div class="foot-info g-right">
-                    <h3>关注EAORON</h3>
+                    <h3>关注LACUES</h3>
                     <div class="foot-bk">
-                        <a href="http://weibo.com/eaoron" class="foot-xl">新浪微博</a>
-                        <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="http://www.eaorong.com/theme/eaoron/images/test/erweima.jpg" /><i></i></span></a>
+                        <a href="https://m.weibo.cn/u/6390383565" class="foot-xl">新浪微博</a>
+                        <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="/skin/default/images/lacues/weixin.png" /><i></i></span></a>
                     </div>
-                    <p>Australian United Pharmaceuticals Pty Ltd</p>
-                    <strong>4008-010-640</strong>
+                    <p>Han-Yao International Holding Group</p>
+                    <strong>188-2414-9679</strong>
                 </div>
             </div>
         </div>
-<div style="display:none"><script src="https://s22.cnzz.com/z_stat.php?id=1262215559&web_id=1262215559" language="JavaScript"></script></div>
         <!-- 尾部 结束 -->
     </div>
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>
