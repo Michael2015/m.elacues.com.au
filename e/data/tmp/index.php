@@ -51,7 +51,11 @@ $bqno++;
             </div>
             <!-- 导航 结束-->
             <!-- banner 开始 -->
-            <div class="m-banner cycle-slideshow" data-cycle-slides=".banner-img">                <a class="banner-img" style="background:url(http://www.eaorong.com/data/slide/20130514acunau.jpg) no-repeat center;"></a>                <a class="banner-img" style="background:url(http://www.eaorong.com/data/slide/20130514rjzqdt.jpg) no-repeat center;"></a>                <a class="banner-img" style="background:url(http://www.eaorong.com/data/slide/20130514xxsctt.jpg) no-repeat center;"></a>                <div class="cycle-pager"></div>
+            <div class="m-banner cycle-slideshow" data-cycle-slides=".banner-img">                
+<a class="banner-img" style="background:url(/skin/default/images/lacues/carousel_1.jpg) no-repeat center;"></a>                
+<a class="banner-img" style="background:url(/skin/default/images/lacues/carousel_2.jpg) no-repeat center;"></a>                
+<a class="banner-img" style="background:url(/skin/default/images/lacues/carousel_3.jpg) no-repeat center;"></a>                
+<div class="cycle-pager"></div>
                 <div class="cycle-next"></div>
                 <div class="cycle-prev"></div>
             </div>            <!-- banner 结束-->

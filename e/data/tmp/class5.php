@@ -61,6 +61,18 @@ $bqno++;
 width:auto;
 height:auto;
 }
+.m-invest .invest-box
+{
+height:auto;
+}
+.m-invest .invest-box h3
+{
+padding-top:10px;
+}
+.m-invest .invest-box
+{
+background: url(/skin/default/images/lacues/investment_bg.jpg) no-repeat center right;
+}
 </style>
             <!--  内容开始 -->
 <?php

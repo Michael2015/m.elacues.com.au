@@ -53,7 +53,7 @@ $bqno++;
 
             <!-- banner 开始 -->
             <div class="m-imgbox">
-                <img src="http://www.eaorong.com/theme/eaoron/images/test/banner2.jpg" />
+                <img src="/skin/default/images/lacues/carousel_1.jpg" />
             </div>
             <!-- banner 结束-->
 
@@ -192,9 +192,6 @@ $fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} w
 ?>
                 </div>
 
-
-                <div class="m-about4">
-                    <div class="m-container">
  <?php
 $bqno=0;
 $ecms_bq_sql=sys_ReturnEcmsLoopBq(62,1,0,0);
@@ -203,19 +200,20 @@ while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
+                <div class="m-about4" style="background:url(/skin/default/images/lacues/pinpai_big_news.jpg);">
+                    <div class="m-container">
                         <div class="t-title">
                            <h2><?=$class_r[$bqr[classid]][classname]?></h2>
                         <p><?=$bqsr[classname]?></p>
-
                             <i></i>
                         </div>
-                        <img src="<?=$bqr[titlepic]?>" />
+                        <img src='<?=$bqr[titlepic]?>'>
+                    </div>
+                </div>
 <?php
 }
 }
 ?>
-                    </div>
-                </div>
                 <div class="m-container" id="contact">
 <?php
 $bqno=0;
@@ -232,7 +230,7 @@ $bqno++;
                     </div>
                     <div class="g-ohide m-about5">
                         <div class="g-left about-left">
-                            <img src="<?=$bqr[titlepic]?>" />
+                            <img src="<?=$bqr[titlepic]?>" height="100%" />
                         </div>
                         <div class="g-right about-right">
 <?php
