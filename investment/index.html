@@ -7,6 +7,12 @@
 <meta name="description" content="" />
 <link href="http://www.eaorong.com/theme/eaoron/images/main.css" rel="stylesheet" />
 </head>
+<style>
+.m-nav li .on
+{
+color:#f4a78d;
+}
+</style>
 <body>
     <div class="m-warp">
         <div class="m-body">
@@ -23,22 +29,50 @@
             </div>            <!-- 头部 结束-->
             <!-- 导航 开始 -->
             <div class="m-head">
-                <div class="m-container">
+                <div class="m-container" id="nav_hover" data-currentid = "5">
                     <a href="index.html" class="head-logo"><img src="/skin/default/images/lacues/logo.png" /></a>
                    <ul class="m-nav">
-<li><a href="/" class="g-noborder nava on"><span>Home page</span><em>首页</em></a></li>
-       <li><a href="/about.html" class="g-noborder nava"><span>About us</span><em>关于我们</em></a></li>
-
-<li><a href="/brand" class="g-noborder nava"><span>Brand family</span><em>品牌中心</em></a></li>
-
-<li><a href="/news" class="g-noborder nava"><span>News</span><em>新闻资讯</em></a></li>
-
-<li><a href="/investment" class="g-noborder nava"><span>Investment policy</span><em>招商政策</em></a></li>
-
-<li><a href="/user" class="g-noborder nava"><span>User center</span><em>用户中心</em></a></li>
-
-<li><a href="/join" class="g-noborder nava"><span>Join us</span><em>加入澳容</em></a></li>
-
+<li><a href="/" class="g-noborder nava" data-classid = '0'><span>Home page</span><em>首页</em></a></li>
+       <li>
+<a href="/about.html" class="g-noborder nava " data-classid = "2">
+<span>About us</span>
+<em>关于我们</em>
+</a>
+</li>
+<li>
+<a href="/brand" class="g-noborder nava " data-classid = "3">
+<span>Brand family</span>
+<em>品牌中心</em>
+</a>
+<dl style="display: none;">
+                                <dd><a href="/brand/anmoqi/">瘦脸按摩器</a></dd>
+                                <dd><a href="/brand/rouduxiuhu/">肉毒杆菌修护原液</a></dd>
+                            </dl>
+</li>
+<li>
+<a href="/news" class="g-noborder nava " data-classid = "4">
+<span>News</span>
+<em>新闻资讯</em>
+</a>
+</li>
+<li>
+<a href="/investment" class="g-noborder nava " data-classid = "5">
+<span>Investment policy</span>
+<em>招商政策</em>
+</a>
+</li>
+<li>
+<a href="/user" class="g-noborder nava " data-classid = "7">
+<span>User center</span>
+<em>用户中心</em>
+</a>
+</li>
+<li>
+<a href="/join" class="g-noborder nava " data-classid = "8">
+<span>Join us</span>
+<em>加入涵耀</em>
+</a>
+</li>
  </ul>
                 </div>
             </div>
@@ -128,5 +162,17 @@ background: url(/skin/default/images/lacues/investment_bg.jpg) no-repeat center 
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.cycle2.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/main.js"></script>
+
+<script>
+var current_id = $('#nav_hover').data('currentid');
+$('#nav_hover ul li').each(function(){
+var classid  = $(this).find('.g-noborder').data('classid');
+if(classid  == current_id )
+{
+$(this).find('a').addClass('on');
+}
+
+});
+</script>
 </body>
 </html>

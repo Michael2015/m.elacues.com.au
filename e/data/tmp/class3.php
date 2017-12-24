@@ -12,6 +12,12 @@ if(!defined('InEmpireCMS'))
 <meta name="description" content="" />
 <link href="http://www.eaorong.com/theme/eaoron/images/main.css" rel="stylesheet" />
 </head>
+<style>
+.m-nav li .on
+{
+color:#f4a78d;
+}
+</style>
 <body>
     <div class="m-warp">
         <div class="m-body">
@@ -28,20 +34,35 @@ if(!defined('InEmpireCMS'))
             </div>            <!-- 头部 结束-->
             <!-- 导航 开始 -->
             <div class="m-head">
-                <div class="m-container">
+                <div class="m-container" id="nav_hover" data-currentid = "3">
                     <a href="index.html" class="head-logo"><img src="/skin/default/images/lacues/logo.png" /></a>
                    <ul class="m-nav">
-<li><a href="/" class="g-noborder nava on"><span>Home page</span><em>首页</em></a></li>
+<li><a href="/" class="g-noborder nava" data-classid = '0'><span>Home page</span><em>首页</em></a></li>
        <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
-<li><a href="/<?=$bqr[classpath]?>" class="g-noborder nava"><span><?=$bqr[bname]?></span><em><?=$bqr[classname]?></em></a></li>
-
+<li>
+<a href="/<?=$bqr[classpath]?>" class="g-noborder nava " data-classid = "<?=$bqr[classid] ?>">
+<span><?=$bqr[bname]?></span>
+<em><?=$bqr[classname]?></em>
+</a>
+<?php
+if($bqr[classid] == 3)
+{
+?>
+<dl style="display: none;">
+                                <dd><a href="/brand/anmoqi/">瘦脸按摩器<?=$class_r[ID]['classname']?></a></dd>
+                                <dd><a href="/brand/rouduxiuhu/">肉毒杆菌修护原液</a></dd>
+                            </dl>
+<?php
+}
+?>
+</li>
 <?php
 }
 }
@@ -56,19 +77,26 @@ $bqno++;
 {
 width:auto;!important
 }
+.m-brandimg img {
+    display: block;
+    width: auto;
+max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
 </style>
             <div class="m-page">
                 <div class="m-container m-brandimg">
-                    <?php
+                     <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq(68,1,0,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq(71,1,0,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]}  order by id desc");
+$fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} where id='99' order by id desc");
 ?>
 <?=$fr[newstext]?>
 <?php
@@ -112,5 +140,17 @@ $fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]}  
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.cycle2.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/main.js"></script>
+
+<script>
+var current_id = $('#nav_hover').data('currentid');
+$('#nav_hover ul li').each(function(){
+var classid  = $(this).find('.g-noborder').data('classid');
+if(classid  == current_id )
+{
+$(this).find('a').addClass('on');
+}
+
+});
+</script>
 </body>
 </html>

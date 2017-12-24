@@ -34,14 +34,29 @@ if(!defined('InEmpireCMS'))
 <li><a href="/" class="g-noborder nava on"><span>Home page</span><em>首页</em></a></li>
        <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
-<li><a href="/<?=$bqr[classpath]?>" class="g-noborder nava"><span><?=$bqr[bname]?></span><em><?=$bqr[classname]?></em></a></li>
-
+<li>
+<a href="/<?=$bqr[classpath]?>" class="g-noborder nava">
+<span><?=$bqr[bname]?></span>
+<em><?=$bqr[classname]?></em>
+</a>
+<?php
+if($bqr[classid] == 3)
+{
+?>
+<dl style="display: none;">
+                                <dd><a href="/brand/anmoqi/">瘦脸按摩器</a></dd>
+                                <dd><a href="/brand/rouduxiuhu/">肉毒杆菌修护原液</a></dd>
+                            </dl>
+<?php
+}
+?>
+</li>
 <?php
 }
 }
