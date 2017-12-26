@@ -12,6 +12,12 @@ if(!defined('InEmpireCMS'))
 <meta name="description" content="<?=$grpagetitle?>" />
 <link href="http://www.eaorong.com/theme/eaoron/images/main.css" rel="stylesheet" />
 </head>
+<style>
+.m-nav li .on
+{
+color:#f4a78d;
+}
+</style>
 <body>
     <div class="m-warp">
         <div class="m-body">
@@ -28,10 +34,10 @@ if(!defined('InEmpireCMS'))
             </div>            <!-- 头部 结束-->
             <!-- 导航 开始 -->
             <div class="m-head">
-                <div class="m-container">
+                <div class="m-container" id="nav_hover" data-currentid = "<?=$ecms_gr[classid]?>">
                     <a href="index.html" class="head-logo"><img src="/skin/default/images/lacues/logo.png" /></a>
                    <ul class="m-nav">
-<li><a href="/" class="g-noborder nava on"><span>Home page</span><em>首页</em></a></li>
+<li><a href="/" class="g-noborder nava" data-classid = '0'><span>Home page</span><em>首页</em></a></li>
        <?php
 $bqno=0;
 $ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
@@ -41,7 +47,7 @@ $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <li>
-<a href="/<?=$bqr[classpath]?>" class="g-noborder nava">
+<a href="/<?=$bqr[classpath]?>" class="g-noborder nava " data-classid = "<?=$bqr[classid] ?>">
 <span><?=$bqr[bname]?></span>
 <em><?=$bqr[classname]?></em>
 </a>
@@ -50,7 +56,7 @@ if($bqr[classid] == 3)
 {
 ?>
 <dl style="display: none;">
-                                <dd><a href="/brand/anmoqi/">瘦脸按摩器</a></dd>
+                                <dd><a href="/brand/anmoqi/">瘦脸按摩器<?=$class_r[ID]['classname']?></a></dd>
                                 <dd><a href="/brand/rouduxiuhu/">肉毒杆菌修护原液</a></dd>
                             </dl>
 <?php
@@ -68,7 +74,7 @@ if($bqr[classid] == 3)
 
             <!-- banner 开始 -->
             <div class="m-imgbox">
-                <img src="http://www.eaorong.com/theme/eaoron/images/info/pbanner01.jpg" />
+                <img src="http://www.eaorong.com/theme/eaoron/images/info/pbanner02.jpg" />
             </div>
             <!-- banner 结束-->
 
@@ -113,5 +119,17 @@ if($bqr[classid] == 3)
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.cycle2.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/main.js"></script>
+
+<script>
+var current_id = $('#nav_hover').data('currentid');
+$('#nav_hover ul li').each(function(){
+var classid  = $(this).find('.g-noborder').data('classid');
+if(classid  == current_id )
+{
+$(this).find('a').addClass('on');
+}
+
+});
+</script>
 </body>
 </html>

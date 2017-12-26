@@ -71,6 +71,17 @@ if($bqr[classid] == 3)
                 </div>
             </div>
             <!-- 导航 结束-->
+<style>
+.cycle-pager span
+{
+background:url(/skin/default/images/lacues/dot_white.png) no-repeat center!important;
+}
+.cycle-pager .cycle-pager-active
+{
+background:url(/skin/default/images/lacues/dot_logo.png) no-repeat center!important;
+}
+
+</style>
             <!-- banner 开始 -->
             <div class="m-banner cycle-slideshow" data-cycle-slides=".banner-img">                
 <a class="banner-img" style="background:url(/skin/default/images/lacues/carousel_1.jpg) no-repeat center;"></a>                

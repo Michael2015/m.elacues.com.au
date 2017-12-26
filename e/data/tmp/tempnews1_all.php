@@ -74,7 +74,7 @@ if($bqr[classid] == 3)
 
             <!-- banner 开始 -->
             <div class="m-imgbox">
-                <img src="http://www.eaorong.com/theme/eaoron/images/info/pbanner01.jpg" />
+                <img src="http://www.eaorong.com/theme/eaoron/images/info/pbanner02.jpg" />
             </div>
             <!-- banner 结束-->
 
