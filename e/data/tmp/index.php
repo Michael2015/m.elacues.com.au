@@ -74,6 +74,7 @@ if($bqr[classid] == 3)
 <style>
 .cycle-pager span
 {
+border-radius:12px;
 background:url(/skin/default/images/lacues/dot_white.png) no-repeat center!important;
 }
 .cycle-pager .cycle-pager-active
