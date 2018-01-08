@@ -7,9 +7,9 @@ if(!defined('InEmpireCMS'))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>EAORON|涂抹式水光针|面膜|Lacues蒸汽眼罩-EAORON跨境微商平台【官网】</title>
-<meta name="keywords" content="EAORON,EAORON官网,EAORON微商,EAORON水光针,EAORON涂抹式水光针,EAORON面膜,Lacues蒸汽眼罩,澳容跨境微商" />
-<meta name="description" content="EAORON跨境微商平台是一家中外合资的大型跨境品牌微商企业。公司主要经营的EAORON、Lacues等澳大利亚进口一线高端护肤品牌。" />
+<title>lacues中国官网</title>
+<meta name="keywords" content="Lacues，瘦脸按摩器，肉毒杆菌修护原液" />
+<meta name="description" content="涵耀（国际）控股集团有限公司由创始人王少涵在香港成立，是一家集研发/生产/销售/进出口为一体的综合生物科技企业。涵耀集团和澳洲一线护肤品牌Lacues达成战略合作，成为Lacues品牌的首席运营方。" />
 <link href="http://www.eaorong.com/theme/eaoron/images/main.css" rel="stylesheet" />
 </head>
 <style>
@@ -17,6 +17,24 @@ if(!defined('InEmpireCMS'))
 {
 color:#f4a78d;
 }
+.m-tab li a:hover
+{
+background:#f4a78d!important;
+}
+.m-tab li .on
+{
+background:#f4a78d!important;
+}
+.m-tab li a
+{
+color:#f4a78d;
+border:1px solid #f4a78d;
+}
+.m-inxnews .news-info h3,.m-inxabout .about-left a,.m-news .news-info .news-more,.m-news .news-big .news-info h3
+{
+color:#f4a78d;
+}
+
 </style>
 <body>
     <div class="m-warp">
@@ -25,10 +43,13 @@ color:#f4a78d;
             <div class="m-top">
                 <div class="m-container">
                     <div class="g-left">
-                        <a href="/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>188-2414-9679</strong>
+                        <a href="/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>020-37417636</strong>
                     </div>
-                    <div class="g-right">
-                        <a href="/">官方授权</a>/<a href="#">在线客服</a>
+                    <div class="g-right" style="position:relative;">
+                        <a href="http://gz.cngyno.com">官方授权</a>/<a href="#" class='aaaa'>在线客服</a>
+                        <div style="display:none;width: 208px;height:189px;position:absolute;z-index: 1000;left: 78px;">
+                             <img src="/skin/default/images/lacues/qrcode.jpg" width="100%">
+                        </div>
                     </div>
                 </div>
             </div>            <!-- 头部 结束-->
@@ -40,7 +61,7 @@ color:#f4a78d;
 <li><a href="/" class="g-noborder nava" data-classid = '0'><span>Home page</span><em>首页</em></a></li>
        <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 and showclass = 0 order by classid ",0,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
@@ -80,6 +101,10 @@ background:url(/skin/default/images/lacues/dot_white.png) no-repeat center!impor
 .cycle-pager .cycle-pager-active
 {
 background:url(/skin/default/images/lacues/dot_logo.png) no-repeat center!important;
+}
+.about-top,.about-left h3,.about-title
+{
+color:#f4a78d!important;
 }
 
 </style>
@@ -159,7 +184,7 @@ $bqno++;
 <!-- 尾部 开始 -->
         <div class="m-footer">
             <div class="m-container">
-                <img src="/skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" />
+                <img src="/skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" style="witdh:315px;height:71px;padding:0;" />
                 <img src="/skin/default/images/lacues/logo.png" class="foot-imgtwo g-left" />
                 <div class="foot-info g-right">
                     <h3>关注LACUES</h3>
@@ -168,7 +193,7 @@ $bqno++;
                         <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="/skin/default/images/lacues/weixin.png" /><i></i></span></a>
                     </div>
                     <p>Han-Yao International Holding Group</p>
-                    <strong>188-2414-9679</strong>
+                    <strong>020-37417636</strong>
                 </div>
             </div>
         </div>
@@ -188,6 +213,13 @@ $(this).find('a').addClass('on');
 }
 
 });
+
+$('.aaaa').hover(function(){
+$(this).next().show();
+},function(){
+$(this).next().hide();
+});
+
 </script>
 </body>
 </html>

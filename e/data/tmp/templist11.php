@@ -17,6 +17,35 @@ if(!defined('InEmpireCMS'))
 {
 color:#f4a78d;
 }
+.m-tab li a:hover
+{
+background:#f4a78d!important;
+}
+.m-tab li .on
+{
+background:#f4a78d!important;
+}
+.m-tab li a
+{
+color:#f4a78d;
+border:1px solid #f4a78d;
+}
+.m-inxnews .news-info h3,.m-inxabout .about-left a,.m-news .news-info .news-more,.m-news .news-big .news-info h3
+{
+color:#f4a78d;
+}
+.m-news .news-info .news-more
+{
+border:1px solid #f4a78d;
+}
+.m-news .news-list li a:hover
+{
+border:1px solid #f4a78d;
+}
+.m-news a:hover
+{
+color:#f4a78d;
+}
 </style>
 <body>
     <div class="m-warp">
@@ -25,10 +54,13 @@ color:#f4a78d;
             <div class="m-top">
                 <div class="m-container">
                     <div class="g-left">
-                        <a href="[!--news.url--]">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>188-2414-9679</strong>
+                        <a href="[!--news.url--]">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>020-37417636</strong>
                     </div>
-                    <div class="g-right">
-                        <a href="/">官方授权</a>/<a href="#">在线客服</a>
+                    <div class="g-right" style="position:relative;">
+                        <a href="http://gz.cngyno.com">官方授权</a>/<a href="#" class='aaaa'>在线客服</a>
+                        <div style="display:none;width: 208px;height:189px;position:absolute;z-index: 1000;left: 78px;">
+                             <img src="[!--news.url--]skin/default/images/lacues/qrcode.jpg" width="100%">
+                        </div>
                     </div>
                 </div>
             </div>            <!-- 头部 结束-->
@@ -40,7 +72,7 @@ color:#f4a78d;
 <li><a href="[!--news.url--]" class="g-noborder nava" data-classid = '0'><span>Home page</span><em>首页</em></a></li>
        <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 and showclass = 0 order by classid ",0,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
@@ -87,7 +119,7 @@ max-width: 100%;
 
 </style>
             <div class="m-page">
-                <div class="m-container m-brandimg">
+                <div class="m-container m-brandimg" style="width:100%">
                 <?php
 $bqno=0;
 $ecms_bq_sql=sys_ReturnEcmsLoopBq('selfinfo',1,0,0);
@@ -123,7 +155,7 @@ $fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} w
 <!-- 尾部 开始 -->
         <div class="m-footer">
             <div class="m-container">
-                <img src="[!--news.url--]skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" />
+                <img src="[!--news.url--]skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" style="witdh:315px;height:71px;padding:0;" />
                 <img src="[!--news.url--]skin/default/images/lacues/logo.png" class="foot-imgtwo g-left" />
                 <div class="foot-info g-right">
                     <h3>关注LACUES</h3>
@@ -132,7 +164,7 @@ $fr=$empire->fetch1("select newstext from {$dbtbpre}ecms_news_data_{$bqr[stb]} w
                         <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="[!--news.url--]skin/default/images/lacues/weixin.png" /><i></i></span></a>
                     </div>
                     <p>Han-Yao International Holding Group</p>
-                    <strong>188-2414-9679</strong>
+                    <strong>020-37417636</strong>
                 </div>
             </div>
         </div>
@@ -152,6 +184,13 @@ $(this).find('a').addClass('on');
 }
 
 });
+
+$('.aaaa').hover(function(){
+$(this).next().show();
+},function(){
+$(this).next().hide();
+});
+
 </script>
 </body>
 </html>

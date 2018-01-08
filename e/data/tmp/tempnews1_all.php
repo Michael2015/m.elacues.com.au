@@ -17,6 +17,19 @@ if(!defined('InEmpireCMS'))
 {
 color:#f4a78d;
 }
+.m-tab li a:hover
+{
+background:#f4a78d!important;
+}
+.m-tab li .on
+{
+background:#f4a78d!important;
+}
+.m-tab li a
+{
+color:#f4a78d;
+border:1px solid #f4a78d;
+}
 </style>
 <body>
     <div class="m-warp">
@@ -25,10 +38,13 @@ color:#f4a78d;
             <div class="m-top">
                 <div class="m-container">
                     <div class="g-left">
-                        <a href="/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>188-2414-9679</strong>
+                        <a href="/">English</a>/<a href="/about.html#contact">联系我们</a>/<strong>020-37417636</strong>
                     </div>
-                    <div class="g-right">
-                        <a href="/">官方授权</a>/<a href="#">在线客服</a>
+                    <div class="g-right" style="position:relative;">
+                        <a href="http://gz.cngyno.com">官方授权</a>/<a href="#" class='aaaa'>在线客服</a>
+                        <div style="display:none;width: 208px;height:189px;position:absolute;z-index: 1000;left: 78px;">
+                             <img src="/skin/default/images/lacues/qrcode.jpg" width="100%">
+                        </div>
                     </div>
                 </div>
             </div>            <!-- 头部 结束-->
@@ -40,7 +56,7 @@ color:#f4a78d;
 <li><a href="/" class="g-noborder nava" data-classid = '0'><span>Home page</span><em>首页</em></a></li>
        <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 order by classid ",0,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname,classpath,bname from [!db.pre!]enewsclass where bclassid=0 and showclass = 0 order by classid ",0,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
@@ -101,7 +117,7 @@ if($bqr[classid] == 3)
 <!-- 尾部 开始 -->
         <div class="m-footer">
             <div class="m-container">
-                <img src="/skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" />
+                <img src="/skin/default/images/lacues/footer_logo.png" class="foot-imgone g-left" style="witdh:315px;height:71px;padding:0;" />
                 <img src="/skin/default/images/lacues/logo.png" class="foot-imgtwo g-left" />
                 <div class="foot-info g-right">
                     <h3>关注LACUES</h3>
@@ -110,7 +126,7 @@ if($bqr[classid] == 3)
                         <a href="javascript:void(0)" class="foot-wx">微信<span class="t-span"><img src="/skin/default/images/lacues/weixin.png" /><i></i></span></a>
                     </div>
                     <p>Han-Yao International Holding Group</p>
-                    <strong>188-2414-9679</strong>
+                    <strong>020-37417636</strong>
                 </div>
             </div>
         </div>
@@ -130,6 +146,13 @@ $(this).find('a').addClass('on');
 }
 
 });
+
+$('.aaaa').hover(function(){
+$(this).next().show();
+},function(){
+$(this).next().hide();
+});
+
 </script>
 </body>
 </html>

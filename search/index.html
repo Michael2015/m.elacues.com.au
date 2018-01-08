@@ -178,6 +178,25 @@ document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/jquery.cycle2.js"></script>
     <script src="http://www.eaorong.com/theme/eaoron/images/main.js"></script>
+
+<script>
+var current_id = $('#nav_hover').data('currentid');
+$('#nav_hover ul li').each(function(){
+var classid  = $(this).find('.g-noborder').data('classid');
+if(classid  == current_id )
+{
+$(this).find('a').addClass('on');
+}
+
+});
+
+$('.aaaa').hover(function(){
+$(this).next().show();
+},function(){
+$(this).next().hide();
+});
+
+</script>
 </body>
 </html>
 </body>

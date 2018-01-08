@@ -125,7 +125,7 @@ $ecms_config['sets']['realplayertype']=',.rm,.ra,.rmvb,.mp4,.mov,.avi,.wav,.ram,
 //-------EmpireCMS.Public.Cache-------
 
 //------------e_public
-$public_r=array('sitename'=>'EAORON|涂抹式水光针|面膜|Lacues蒸汽眼罩-EAORON跨境微商平台【官网】',
+$public_r=array('sitename'=>'lacues中国官网',
 'newsurl'=>'/',
 'filetype'=>'|.png|.gif|.jpg|.swf|.rar|.zip|.mp3|.wmv|.txt|.doc|',
 'filesize'=>2048,
@@ -237,7 +237,7 @@ $public_r=array('sitename'=>'EAORON|涂抹式水光针|面膜|Lacues蒸汽眼罩
 'gbkey_ok'=>0,
 'fbkey_ok'=>0,
 'newaddinfotime'=>0,
-'classnavs'=>'<a href=\"/about.html/\">关于我们</a>&nbsp;|&nbsp;<a href=\"/brand/\">品牌中心</a>&nbsp;|&nbsp;<a href=\"/news/\">新闻资讯</a>&nbsp;|&nbsp;<a href=\"/investment/\">招商政策</a>&nbsp;|&nbsp;<a href=\"/user/\">用户中心</a>&nbsp;|&nbsp;<a href=\"/join/\">加入涵耀</a>',
+'classnavs'=>'<a href=\"/about.html/\">关于我们</a>&nbsp;|&nbsp;<a href=\"/news/\">新闻资讯</a>&nbsp;|&nbsp;<a href=\"/brand/\">品牌中心</a>&nbsp;|&nbsp;<a href=\"/investment/\">招商政策</a>&nbsp;|&nbsp;<a href=\"/user/\">用户中心</a>',
 'adminstyle'=>',1,2,',
 'docnewsnum'=>300,
 'openschall'=>0,
